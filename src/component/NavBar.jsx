@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 function NavBar(props) {
 
     const state = useSelector((state) => state.handleCart);
-    console.log(state);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">

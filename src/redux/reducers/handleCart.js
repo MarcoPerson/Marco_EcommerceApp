@@ -2,7 +2,6 @@ const cart = [];
 
 const handleCart = (state = cart, action) => {
     const product = action.payload;
-    console.log(state);
     switch (action.type) {
         case "ADDITEM":
             const itemA = state.find((x) => x.id === product.id);

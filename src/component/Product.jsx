@@ -18,7 +18,6 @@ function Product(props) {
             const response = await fetch(`https://fakestoreapi.com/products/${id}`);
             setProduct(await response.json());
             setLoading(false);
-            console.log(response);
         }
 
         getProduct();

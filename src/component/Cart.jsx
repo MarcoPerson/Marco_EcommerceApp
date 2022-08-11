@@ -15,6 +15,19 @@ function Cart(props) {
         totalAmount += product.price * product.qts;
     }
 
+
+    const checkout = async () => {
+        const result = await fetch("https://StripePaymentMarcoECommerce.marcoperson.repl.co/create-checkout-session", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({state : state})
+        })
+        const url = await result.json()
+        window.location = url["url"]
+    }
+
     const NoItem = () => {
         return (
             <>
@@ -56,7 +69,7 @@ function Cart(props) {
         return (
             <>
                 <div className="text-center text-uppercase fw-bolder fs-1 py-4">Total Amount : ${totalAmount.toFixed(2)}</div>
-                <button className="btn btn-outline-success py-2 px-4 fs-2">Go to Payment</button>
+                <button onClick={checkout} className="btn btn-outline-success py-2 px-4 fs-2">Go to Payment</button>
             </>
 
         )
@@ -67,7 +80,7 @@ function Cart(props) {
             <div className="hero">
                 {(state.length === 0) ? <NoItem /> : <ShowCarts />}
             </div>
-            {(state.length === 0) ? console.log() : <TotalAmount />}
+            {(state.length === 0) ? "" : <TotalAmount />}
             <br />
             <br />
             <br />
