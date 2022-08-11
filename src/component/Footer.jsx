@@ -1,10 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 function Footer(props) {
 
-    const state = useSelector((state) => state.handleCart);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm" style={{minHeight: "300px"}}>
