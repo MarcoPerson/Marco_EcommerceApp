@@ -7,6 +7,7 @@ import Product from './component/Product';
 import Cart from './component/Cart';
 import Cancel from './component/Cancel';
 import Success from './component/Success';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/cancel' element={<Cancel />} />
         <Route exact path='/success' element={<Success />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -3,3 +3,40 @@
 .navbar-nav{
     font-size: 18px;
 };
+
+.footer-group{
+    min-width: 500px;
+}
+
+.footer-group h2{
+    font-size: 1.5em;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-group h2::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    border: 2px solid rgb(20, 169, 152);
+    width: 30%;
+    z-index: 2000;
+}
+
+.marco-navbar-nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.marco-nav-link{
+    text-decoration: none;
+    color: gray;
+}
+
+.marco-nav-link:hover{
+    color: rgb(210, 204, 204);
+}
